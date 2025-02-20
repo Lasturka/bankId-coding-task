@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: BankID_coding_task
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:151161818616-nd56k4d0sp4kt6u5j880dro7cmk3242c.apps.googleusercontent.com}
+            client-secret: ${GOOGLE_CLIENT_SECRET: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}
+            scope: ${GOOGLE_SCOPE:email}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+api:
+  security:
+    issuerUri: https://accounts.google.com
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,live,info
+  endpoint:
+    health:
+      show-details: always
+  health:
+    defaults:
+      enabled: true
