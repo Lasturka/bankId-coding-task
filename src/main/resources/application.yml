@@ -6,8 +6,8 @@ spring:
       client:
         registration:
           google:
-            client-id: ${GOOGLE_CLIENT_ID:151161818616-nd56k4d0sp4kt6u5j880dro7cmk3242c.apps.googleusercontent.com}
-            client-secret: ${GOOGLE_CLIENT_SECRET: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}
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
             scope: ${GOOGLE_SCOPE:email}
 
 server:
